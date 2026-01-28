@@ -42,6 +42,7 @@
     "controller_type": {
       "title": "Controller Type",
       "description": "auto-detect, proxy (UniFi OS), or direct (standalone)",
+      "enum": ["auto", "proxy", "direct"],
       "default": "auto"
     },
     "http_enabled": {
@@ -64,13 +65,11 @@
     },
     "enabled_categories": {
       "title": "Enabled Tool Categories",
-      "description": "Comma-separated list of categories to load (e.g., clients,devices,stats)",
-      "default": ""
+      "description": "Comma-separated list of categories to load (e.g., clients,devices,stats)"
     },
     "enabled_tools": {
       "title": "Enabled Tools",
-      "description": "Comma-separated list of specific tools to register",
-      "default": ""
+      "description": "Comma-separated list of specific tools to register"
     },
     "allowed_hosts": {
       "title": "Allowed Hosts for HTTP",
@@ -88,25 +87,21 @@
             "create": {
               "title": "Create Clients",
               "description": "Create new client entries",
-              "type": "boolean",
               "default": false
             },
             "delete": {
               "title": "Delete Clients",
               "description": "Remove client entries",
-              "type": "boolean",
               "default": false
             },
             "update": {
               "title": "Update Clients",
               "description": "Modify client settings",
-              "type": "boolean",
               "default": false
             },
             "reconnect": {
               "title": "Force Reconnect",
               "description": "Force client to reconnect to network",
-              "type": "boolean",
               "default": false
             }
           }
@@ -118,25 +113,21 @@
             "adopt": {
               "title": "Adopt Device",
               "description": "Adopt unadopted devices into controller",
-              "type": "boolean",
               "default": false
             },
             "reboot": {
               "title": "Reboot Device",
               "description": "Restart a device",
-              "type": "boolean",
               "default": false
             },
             "upgrade": {
               "title": "Upgrade Firmware",
               "description": "Upgrade device firmware",
-              "type": "boolean",
               "default": false
             },
             "rename": {
               "title": "Rename Device",
               "description": "Change device name",
-              "type": "boolean",
               "default": false
             }
           }
@@ -148,20 +139,17 @@
             "create": {
               "title": "Create Firewall Rules",
               "description": "Add new firewall policies",
-              "type": "boolean",
-              "default": true
+              "default": false
             },
             "delete": {
               "title": "Delete Firewall Rules",
               "description": "Remove firewall policies",
-              "type": "boolean",
               "default": false
             },
             "update": {
               "title": "Update Firewall Rules",
               "description": "Modify existing firewall settings",
-              "type": "boolean",
-              "default": true
+              "default": false
             }
           }
         },
@@ -172,20 +160,17 @@
             "create": {
               "title": "Create Vouchers",
               "description": "Generate access vouchers for guest network",
-              "type": "boolean",
-              "default": true
+              "default": false
             },
             "delete": {
               "title": "Delete Vouchers/Hotspots",
               "description": "Remove vouchers or hotspots",
-              "type": "boolean",
               "default": false
             },
             "update": {
               "title": "Update Hotspot Settings",
               "description": "Modify hotspot configuration",
-              "type": "boolean",
-              "default": true
+              "default": false
             }
           }
         },
@@ -196,19 +181,16 @@
             "create": {
               "title": "Create Networks",
               "description": "Add new network/VLAN configurations",
-              "type": "boolean",
               "default": false
             },
             "delete": {
               "title": "Delete Networks",
               "description": "Remove network configurations",
-              "type": "boolean",
               "default": false
             },
             "update": {
               "title": "Update Networks",
               "description": "Modify network settings",
-              "type": "boolean",
               "default": false
             }
           }
@@ -220,20 +202,17 @@
             "create": {
               "title": "Create Port Forwards",
               "description": "Add new port forwarding rules",
-              "type": "boolean",
-              "default": true
+              "default": false
             },
             "delete": {
               "title": "Delete Port Forwards",
               "description": "Remove port forwarding rules",
-              "type": "boolean",
               "default": false
             },
             "update": {
               "title": "Update Port Forwards",
               "description": "Modify port forwarding settings",
-              "type": "boolean",
-              "default": true
+              "default": false
             }
           }
         },
@@ -244,20 +223,17 @@
             "create": {
               "title": "Create QoS Rules",
               "description": "Add traffic shaping rules",
-              "type": "boolean",
-              "default": true
+              "default": false
             },
             "delete": {
               "title": "Delete QoS Rules",
               "description": "Remove QoS rules",
-              "type": "boolean",
               "default": false
             },
             "update": {
               "title": "Update QoS Rules",
               "description": "Modify QoS settings",
-              "type": "boolean",
-              "default": true
+              "default": false
             }
           }
         },
@@ -268,19 +244,16 @@
             "create": {
               "title": "Create Routes",
               "description": "Add static routes",
-              "type": "boolean",
               "default": false
             },
             "delete": {
               "title": "Delete Routes",
               "description": "Remove static routes",
-              "type": "boolean",
               "default": false
             },
             "update": {
               "title": "Update Routes",
               "description": "Modify route settings",
-              "type": "boolean",
               "default": false
             }
           }
@@ -292,19 +265,16 @@
             "create": {
               "title": "Create Traffic Routes",
               "description": "Add policy-based routing rules",
-              "type": "boolean",
               "default": false
             },
             "delete": {
               "title": "Delete Traffic Routes",
               "description": "Remove traffic route policies",
-              "type": "boolean",
               "default": false
             },
             "update": {
               "title": "Update Traffic Routes",
               "description": "Modify traffic route settings",
-              "type": "boolean",
               "default": false
             }
           }
@@ -316,20 +286,17 @@
             "create": {
               "title": "Create User Groups",
               "description": "Add bandwidth limit profiles",
-              "type": "boolean",
-              "default": true
+              "default": false
             },
             "delete": {
               "title": "Delete User Groups",
               "description": "Remove user group profiles",
-              "type": "boolean",
               "default": false
             },
             "update": {
               "title": "Update User Groups",
               "description": "Modify user group settings",
-              "type": "boolean",
-              "default": true
+              "default": false
             }
           }
         },
@@ -340,19 +307,16 @@
             "create": {
               "title": "Create VPN",
               "description": "Add new VPN server or client",
-              "type": "boolean",
               "default": false
             },
             "delete": {
               "title": "Delete VPN",
               "description": "Remove VPN configurations",
-              "type": "boolean",
               "default": false
             },
             "update": {
               "title": "Update VPN",
               "description": "Modify VPN settings",
-              "type": "boolean",
               "default": false
             }
           }
@@ -364,142 +328,18 @@
             "create": {
               "title": "Create WLANs",
               "description": "Add new wireless networks",
-              "type": "boolean",
               "default": false
             },
             "delete": {
               "title": "Delete WLANs",
               "description": "Remove wireless networks",
-              "type": "boolean",
               "default": false
             },
             "update": {
               "title": "Update WLANs",
               "description": "Modify wireless network settings",
-              "type": "boolean",
               "default": false
             }
-          }
-        }
-      }
-    }
-  },
-  "schema": {
-    "type": "object",
-    "properties": {
-      "host": "str",
-      "username": "str",
-      "password": "password",
-      "port": "int",
-      "site": "str",
-      "verify_ssl": "bool",
-      "controller_type": "list(auto|proxy|direct)",
-      "http_enabled": "bool",
-      "auto_confirm": "bool",
-      "tool_registration_mode": "list(lazy|eager|meta_only)",
-      "enabled_categories": "str",
-      "enabled_tools": "str",
-      "allowed_hosts": "str",
-      "permissions": {
-        "clients": {
-          "type": "object",
-          "properties": {
-            "create": "bool",
-            "delete": "bool",
-            "update": "bool",
-            "reconnect": "bool"
-          }
-        },
-        "devices": {
-          "type": "object",
-          "properties": {
-            "adopt": "bool",
-            "reboot": "bool",
-            "upgrade": "bool",
-            "rename": "bool"
-          }
-        },
-        "firewalls": {
-          "type": "object",
-          "properties": {
-            "create": "bool",
-            "delete": "bool",
-            "update": "bool"
-          }
-        },
-        "hotspots": {
-          "type": "object",
-          "properties": {
-            "create": "bool",
-            "delete": "bool",
-            "update": "bool"
-          }
-        },
-        "networks": {
-          "type": "object",
-          "properties": {
-            "create": "bool",
-            "delete": "bool",
-            "update": "bool"
-          }
-        },
-        "port_forwards": {
-          "type": "object",
-          "properties": {
-            "create": "bool",
-            "delete": "bool",
-            "update": "bool"
-          }
-        },
-        "qos": {
-          "type": "object",
-          "properties": {
-            "create": "bool",
-            "delete": "bool",
-            "update": "bool"
-          }
-        },
-        "routes": {
-          "type": "object",
-          "properties": {
-            "create": "bool",
-            "delete": "bool",
-            "update": "bool"
-          }
-        },
-        "traffic_routes": {
-          "type": "object",
-          "properties": {
-            "create": "bool",
-            "default": "false",
-            "delete": "bool",
-            "update": "bool"
-          }
-        },
-        "usergroups": {
-          "type": "object",
-          "properties": {
-            "create": "bool",
-            "delete": "bool",
-            "update": "bool"
-          }
-        },
-        "vpns": {
-          "type": "object",
-          "default": "false",
-          "properties": {
-            "create": "bool",
-            "delete": "bool",
-            "update": "bool"
-          }
-        },
-        "wlans": {
-          "type": "object",
-          "default": "false",
-          "properties": {
-            "create": "bool",
-            "delete": "bool",
-            "update": "bool"
           }
         }
       }
