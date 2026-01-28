@@ -343,6 +343,126 @@
           }
         }
       }
+    },
+  "schema": {
+    "type": "object",
+    "properties": {
+      "host": "str",
+      "username": "str",
+      "password": "password",
+      "port": "int",
+      "site": "str",
+      "verify_ssl": "bool",
+      "controller_type": "list(auto|proxy|direct)",
+      "http_enabled": "bool",
+      "auto_confirm": "bool",
+      "tool_registration_mode": "list(lazy|eager|meta_only)",
+      "enabled_categories": "str",
+      "enabled_tools": "str",
+      "allowed_hosts": "str",
+      "permissions": {
+        "clients": {
+          "type": "object",
+          "properties": {
+            "create": "bool",
+            "delete": "bool",
+            "update": "bool",
+            "reconnect": "bool"
+          }
+        },
+        "devices": {
+          "type": "object",
+          "properties": {
+            "adopt": "bool",
+            "reboot": "bool",
+            "upgrade": "bool",
+            "rename": "bool"
+          }
+        },
+        "firewalls": {
+          "type": "object",
+          "properties": {
+            "create": "bool",
+            "delete": "bool",
+            "update": "bool"
+          }
+        },
+        "hotspots": {
+          "type": "object",
+          "properties": {
+            "create": "bool",
+            "delete": "bool",
+            "update": "bool"
+          }
+        },
+        "networks": {
+          "type": "object",
+          "properties": {
+            "create": "bool",
+            "delete": "bool",
+            "update": "bool"
+          }
+        },
+        "port_forwards": {
+          "type": "object",
+          "properties": {
+            "create": "bool",
+            "delete": "bool",
+            "update": "bool"
+          }
+        },
+        "qos": {
+          "type": "object",
+          "properties": {
+            "create": "bool",
+            "delete": "bool",
+            "update": "bool"
+          }
+        },
+        "routes": {
+          "type": "object",
+          "properties": {
+            "create": "bool",
+            "delete": "bool",
+            "update": "bool"
+          }
+        },
+        "traffic_routes": {
+          "type": "object",
+          "default": "false",
+          "properties": {
+            "create": "bool",
+            "delete": "bool",
+            "update": "bool"
+          }
+        },
+        "usergroups": {
+          "type": "object",
+          "properties": {
+            "create": "bool",
+            "delete": "bool",
+            "update": "bool"
+          }
+        },
+        "vpns": {
+          "type": "object",
+          "default": "false",
+          "properties": {
+            "create": "bool",
+            "delete": "bool",
+            "update": "bool"
+          }
+        },
+        "wlans": {
+          "type": "object",
+          "default": "false",
+          "properties": {
+            "create": "bool",
+            "delete": "bool",
+            "update": "bool"
+          }
+        }
+      }
     }
   }
 }
