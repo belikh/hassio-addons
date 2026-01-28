@@ -1,7 +1,7 @@
 {
   "name": "UniFi Network MCP Server",
   "description": "Run UniFi Network MCP Server to expose UniFi controller tools via MCP protocol",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "slug": "unifi_network_mcp",
   "init": false,
   "arch": [
