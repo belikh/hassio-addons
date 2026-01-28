@@ -1,37 +1,26 @@
-ARG BUILD_FROM
+ARG BUILD_FROM=ghcr.io/home-assistant/amd64-base-python:3.12-alpine3.20
 FROM ${BUILD_FROM}
 
-# Install dependencies
-RUN apk add --no-cache \
-    curl \
-    python3 \
-    py3-pip
-
-# Install uv for faster package management
-RUN curl -fsSL https://astral.sh/uv/install.sh | sh
+# Install Python and pip
+RUN apk add --no-cache python3 py3-pip
 
 # Create a non-root user
 RUN addgroup -g 1000 mcp && \
     adduser -D -u 1000 -G mcp mcp
 
-# Set up the installation directory
 WORKDIR /app
 
-# Copy the entrypoint script
+# Copy add-on files
 COPY run.sh /run.sh
 RUN chmod +x /run.sh
 
-# Switch to non-root user
 USER mcp
 
-# Install unifi-network-mcp using uv
-RUN /root/.local/bin/uv pip install unifi-network-mcp
+# Install unifi-network-mcp directly from PyPI
+RUN pip3 install --no-cache-dir unifi-network-mcp
 
-# Expose HTTP port (optional, for SSE mode)
 EXPOSE 3000
 
-# Set environment variables
 ENV PYTHONUNBUFFERED=1
 
-# Run the MCP server via the entrypoint script
 CMD ["/run.sh"]
