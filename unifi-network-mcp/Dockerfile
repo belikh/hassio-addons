@@ -14,17 +14,18 @@ WORKDIR /app
 COPY run.sh /run.sh
 RUN chmod +x /run.sh
 
+# Create virtual environment as ROOT, then switch to mcp
+RUN python3 -m venv /app/venv && \
+    chown -R mcp:mcp /app/venv
+
 USER mcp
 
-# Create virtual environment
-RUN python3 -m venv /app/venv
 ENV PATH="/app/venv/bin:$PATH"
+ENV PYTHONUNBUFFERED=1
 
 # Install unifi-network-mcp in venv
 RUN pip3 install --no-cache-dir unifi-network-mcp
 
 EXPOSE 3000
-
-ENV PYTHONUNBUFFERED=1
 
 CMD ["/run.sh"]
