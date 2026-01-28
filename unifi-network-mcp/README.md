@@ -1,7 +1,8 @@
 # UniFi Network MCP Server Add-on for Home Assistant
 
-[![Open your Home Assistant instance, show the add-on store, open the repository and use this URL to manually add this repository as an add-on store.](https://my.home-assistant.io/badges/add_badge.svg)](https://my.home-assistant.io/blueprint/add?url=https://github.com/belikh/hassio-addons)
-This add-on runs the [UniFi Network MCP Server](https://github.com/sirkirby/unifi-network-mcp) in Home Assistant OS. It exposes your UniFi Network Controller as a set of MCP tools that can be used by LLMs (like Claude Desktop) or other MCP-compatible clients.
+[![Open your Home Assistant instance and show the add-on repository dialog with this repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fbelikh%2Fhassio-addons)
+
+This add-on runs to [UniFi Network MCP Server](https://github.com/sirkirby/unifi-network-mcp) in Home Assistant OS. It exposes your UniFi Network Controller as a set of MCP tools that can be used by LLMs (like Claude Desktop) or other MCP-compatible clients.
 
 ## Features
 
@@ -26,7 +27,7 @@ This add-on runs the [UniFi Network MCP Server](https://github.com/sirkirby/unif
 1. Create a folder `addons/unifi-network-mcp` in your Home Assistant configuration directory
 2. Place all add-on files in that folder
 3. In Home Assistant, go to **Settings** → **Add-ons** → **Add-ons Store**
-4. Click the three dots in the top right → **Install add-on from repository**
+4. Click to three dots in the top right → **Install add-on from repository**
 5. Navigate to your addons folder and select `unifi-network-mcp`
 6. Click **Install**
 
