@@ -16,7 +16,11 @@ RUN chmod +x /run.sh
 
 USER mcp
 
-# Install unifi-network-mcp directly from PyPI
+# Create virtual environment
+RUN python3 -m venv /app/venv
+ENV PATH="/app/venv/bin:$PATH"
+
+# Install unifi-network-mcp in venv
 RUN pip3 install --no-cache-dir unifi-network-mcp
 
 EXPOSE 3000
